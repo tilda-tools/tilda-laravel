@@ -25,7 +25,7 @@
     "require": {
         "php": ">=7.0",
         "illuminate/support": "^5.5",
-        "tilda-tools/tilda-php": "^0.0.1"
+        "tilda-tools/tilda-php": "^0.0.2"
     },
     "require-dev": {},
     "autoload": {
