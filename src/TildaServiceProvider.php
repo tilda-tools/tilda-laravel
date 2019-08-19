@@ -14,11 +14,15 @@ class TildaServiceProvider extends ServiceProvider
 
         $this->mergeConfigFrom($defaultConfigPath, 'tilda');
 
-        $this->app->singleton(TildaLoader::class, function () {
-            $client = new TildaApi(config('tilda.api'));
-            return new TildaLoader($client, config('tilda'));
+        $this->app->singleton(TildaApi::class, function() {
+            return new TildaApi(config('tilda.api'));
         });
-        $this->app->alias(TildaLoader::class, 'tilda');
+        $this->app->singleton(TildaLoader::class, function () {
+            return new TildaLoader($this->app->make(TildaApi::class), config('tilda'));
+        });
+
+        $this->app->alias(TildaApi::class, 'tilda.api');
+        $this->app->alias(TildaLoader::class, 'tilda.loader');
 
         $this->publishes([
             $defaultConfigPath => config_path('tilda.php'),
