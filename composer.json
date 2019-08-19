@@ -1,0 +1,44 @@
+{
+    "name": "tilda-tools/tilda-laravel",
+    "description": "Tilda PHP SDK",
+    "keywords": [
+        "tilda",
+        "laravel",
+        "php",
+        "sdk",
+        "api",
+        "client"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/tilda-tools/tilda-laravel",
+    "support": {
+        "issues": "https://github.com/tilda-tools/tilda-laravel/issues",
+        "source": "https://github.com/tilda-tools/tilda-laravel"
+    },
+    "authors": [
+        {
+            "name": "Michael Ledin",
+            "email": "mledin89@gmail.com"
+        }
+    ],
+    "version": "0.0.1",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "^5.5",
+        "tilda-tools/tilda-php": "^0.0.1"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "TildaTools\\Laravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TildaTools\\Laravel\\TildaServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
