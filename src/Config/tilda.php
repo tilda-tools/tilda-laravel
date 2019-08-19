@@ -8,7 +8,7 @@ return [
     ],
     'api' => [
         'endpoint' => env('TILDA_API_ENDPOINT'),
-        'public_key' => env('TILDA_API_PUBLIC'),
-        'secret_key' => env('TILDA_API_SECRET'),
+        'public_key' => env('TILDA_API_PUBLIC_KEY'),
+        'secret_key' => env('TILDA_API_SECRET_KEY'),
     ]
 ];

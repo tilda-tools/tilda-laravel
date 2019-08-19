@@ -10,6 +10,10 @@ class TildaServiceProvider extends ServiceProvider
 {
     public function register()
     {
+        $defaultConfigPath = __DIR__ . '/Config/tilda.php';
+
+        $this->mergeConfigFrom($defaultConfigPath, 'tilda');
+
         $this->app->singleton(TildaLoader::class, function () {
             $client = new TildaApi(config('tilda.api'));
             return new TildaLoader($client, config('tilda'));
@@ -17,8 +21,8 @@ class TildaServiceProvider extends ServiceProvider
         $this->app->alias(TildaLoader::class, 'tilda');
 
         $this->publishes([
-            __DIR__ . '/Config/tilda.php' => config_path('tilda.php'),
-        ]);
+            $defaultConfigPath => config_path('tilda.php'),
+        ], 'config');
     }
 
 }
