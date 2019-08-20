@@ -21,7 +21,7 @@
             "email": "mledin89@gmail.com"
         }
     ],
-    "version": "0.0.5-dev",
+    "version": "0.0.6",
     "require": {
         "php": ">=7.0",
         "laravel/framework": "^5.5",
