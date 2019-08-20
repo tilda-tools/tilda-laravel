@@ -21,11 +21,11 @@
             "email": "mledin89@gmail.com"
         }
     ],
-    "version": "0.0.6",
+    "version": "0.0.7",
     "require": {
         "php": ">=7.0",
         "laravel/framework": "^5.5",
-        "tilda-tools/tilda-php": "^0.0.3"
+        "tilda-tools/tilda-php": "^0.0.4"
     },
     "require-dev": {},
     "autoload": {
